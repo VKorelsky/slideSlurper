@@ -6,7 +6,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='slideSlurper',
-    version='1.0.5',
+    version='1.0.6',
     description='slurp slides from lecture videos',
     url='https://github.com/vkorelsky/slideSlurper',
     author='Victor Korelsky',
