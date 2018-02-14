@@ -6,7 +6,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='slideSlurper',
-    version='1.0.0',
+    version='1.0.2',
     description='slurp slides from lecture videos',
     url='https://github.com/vkorelsky/slideSlurper',
     author='Victor Korelsky',
@@ -18,8 +18,7 @@ setup(
         'tqdm',
         'cv2',
         'numpy',
-        'fdpf',
-        'PIL'
+        'Pillow'
         ],
     entry_points={
         'console_scripts': [
