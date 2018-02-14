@@ -6,7 +6,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='slideSlurper',
-    version='1.0.3',
+    version='1.0.4',
     description='slurp slides from lecture videos',
     url='https://github.com/vkorelsky/slideSlurper',
     author='Victor Korelsky',
@@ -16,7 +16,6 @@ setup(
     packages=find_packages('.'),
     install_requires=[
         'tqdm',
-        'cv2',
         'numpy',
         'Pillow'
         ],
