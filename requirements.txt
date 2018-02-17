@@ -1,3 +1,5 @@
 tqdm
 numpy
 Pillow
+opencv-python
+fpdf

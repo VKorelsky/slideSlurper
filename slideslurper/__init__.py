@@ -93,7 +93,7 @@ def getUniqueFrames(videoPath, directory):
 def validArgs(argc, argv):
     """check that we have two arguments, and that the video one points to a valid video file"""
     if argc != 3:
-        print("usage: python slide_slurper.py <lecture_video.mp4> <name_for_output_pdf>")
+        print("usage: slurp <lecture_video.mp4> <name_for_output_pdf>")
         print("e.g python slide_slurper.py lecture.mp4 lecture-out #=> will output a pdf called lecture-out.pdf")
         return False
 
