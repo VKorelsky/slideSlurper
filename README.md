@@ -7,11 +7,15 @@ Pass a lecture video to the slurper and it will give you a pdf of the slides use
 
 - requires [opencv](https://opencv.org/) to be installed on your machine.
 ```
-pip install slideSlurper
+$ pip install slideSlurper
 ```
-
+or clone the repository and 
+```
+$ pip install -r requirements.txt
+$ python slideslurper/__init__.py
+```
 ## Usage
 
 ```
-usage: slurp  video_file_path output_pdf_name
+$ slurp video_file_path output_pdf_name
 ```
