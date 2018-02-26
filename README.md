@@ -19,3 +19,6 @@ $ python slideslurper/__init__.py
 ```
 $ slurp video_file_path output_pdf_name
 ```
+## Notes
+
+- works best with mp4 video files
