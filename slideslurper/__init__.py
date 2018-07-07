@@ -5,16 +5,16 @@ import cv2
 import numpy as np
 from tqdm import tqdm
 from fpdf import FPDF
-# can probably get rid of this, but no time so far
-from PIL import Image
 
 def makePdf(pdfFileName, listPages, dir):
     # make a pdf from the slides
     if (dir):
         dir += "/"
 
-    cover = Image.open(dir + str(listPages[0]) + ".jpg")
-    width, height = cover.size
+    img = cv2.imread(dir + str(listPages[0]) + ".jpg")
+
+    height = np.size(img, 0)
+    width = np.size(img, 1)
 
     pdf = FPDF(unit = "pt", format = [width, height])
 
@@ -31,6 +31,7 @@ def setUp(directory):
         os.makedirs(directory)
     except OSError as e:
         if e.errno != errno.EEXIST:
+            # raise a better error ?
             raise
 
 
