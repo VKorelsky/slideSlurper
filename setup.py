@@ -16,8 +16,7 @@ setup(
     packages=find_packages('.'),
     install_requires=[
         'tqdm',
-        'numpy',
-        'Pillow'
+        'numpy'
         ],
     entry_points={
         'console_scripts': [
