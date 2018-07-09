@@ -31,7 +31,7 @@ def setUp(directory):
         os.makedirs(directory)
     except OSError as e:
         if e.errno != errno.EEXIST:
-            # raise a better error ?
+            # TODO: raise a better error
             raise
 
 
@@ -64,16 +64,13 @@ def getUniqueFrames(videoPath, directory):
     success1, image1 = videoStream.read()
     grayImage1 = toGrayscale(image1)
 
-    # cv2.imwrite("short-frames/frame%d.jpg" % 1, image1)
-    # imageList.append("frame1")
-
     success = True
     slide = 0
     progressBar = tqdm(total=frameCount, desc="parsing video (%d frames)" % frameCount, unit="frames")
 
     while success:
         success2, image2 = videoStream.read()
-        success = success1 & success2
+        success = success1 and success2
 
         if success:
             grayImage2 = toGrayscale(image2)
