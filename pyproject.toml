@@ -1,0 +1,28 @@
+[project]
+name = "slideslurper"
+version = "2.0.0"
+description = "slurp slides from lecture videos"
+readme = "README.md"
+authors = [
+    { name = "Victor Korelsky", email = "VKorelsky@users.noreply.github.com" },
+]
+license = "MIT"
+keywords = ["video", "capture", "lectures"]
+urls = { repository = "https://github.com/vkorelsky/slideSlurper" }
+requires-python = ">=3.13"
+dependencies = [
+    "fpdf>=1.7.2",
+    "numpy>=2.3.0",
+    "opencv-python>=4.11.0.86",
+    "tqdm>=4.67.1",
+]
+
+[project.scripts]
+slurp = "slideslurper:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+upackages = ["slideslurper/__init__.py"]
