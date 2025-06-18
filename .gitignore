@@ -1,4 +1,9 @@
-dist/
+__pycache__/
+**/__pycache__/
+*.py[oc]
 build/
-slideSlurper.egg-info
-test-input/
+dist/
+wheels/
+*.egg-info
+.venv/
+.out/
